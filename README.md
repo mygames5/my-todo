@@ -7,8 +7,8 @@
 ---
 
 ### 🚀 Ссылки проекта
-![Build Status](https://github.com/mygames5/my-personal-todo/actions/workflows/web.yml/badge.svg)
-[![Deploy on GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat&logo=github)](https://mygames5.github.io/my-personal-todo/)
+![Build Status](https://github.com/mygames5/my-todo/actions/workflows/web.yml/badge.svg)
+[![Deploy on GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat&logo=github)](https://mygames5.github.io/my-todo/)
 
 ---
 
