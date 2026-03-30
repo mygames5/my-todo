@@ -41,7 +41,7 @@
 1. **Установка компонентов:**
    ```bash
    yarn install
-Локальный запуск (Development):
-yarn start
-Сборка проекта (Production):
-yarn build
+   Локальный запуск (Development):
+   yarn start
+   Сборка проекта (Production):
+   yarn build
