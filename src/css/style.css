@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #0079bf;
+  margin: 0;
+  padding: 20px;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.column {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.columnHeader {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.cardsList {
+  min-height: 20px;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.cardImage {
+  max-width: 100%;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cardBadges {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.badgeIcon {
+  color: #6b778c;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.commentBtn {
+  cursor: pointer;
+}
+
+.commentBtn:hover {
+  color: #172b4d;
+}
+
+/* вот тут я переделал крестик теперь он белый круглый и с тенью */
+.cardDelete {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #172b4d;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.card:hover .cardDelete {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.addCardBtn {
+  border: none;
+  background: transparent;
+  color: #5e6c84;
+  cursor: pointer;
+  padding: 5px;
+  text-align: left;
+}
+
+.addCardBtn:hover {
+  background-color: rgba(9,30,66,.08);
+}
+
+.addCardForm textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.dragged {
+  position: absolute;
+  z-index: 1000;
+  cursor: grabbing;
+  pointer-events: none;
+  transform: rotate(3deg);
+}
+
+.placeholder {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+/* красота для модалки */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modalContent {
+  background-color: #f4f5f7;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dfe1e6;
+  padding-bottom: 10px;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  color: #172b4d;
+}
+
+.closeModalBtn {
+  cursor: pointer;
+  color: #6b778c;
+  font-size: 18px;
+}
+
+.closeModalBtn:hover {
+  color: #172b4d;
+}
+
+.commentsListContainer {
+  margin-bottom: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.commentItem {
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(9,30,66,.25);
+  font-size: 14px;
+  word-wrap: break-word;
+  position: relative;
+}
+
+/* фотки в комментах */
+.commentImage {
+  max-width: 100%;
+  border-radius: 3px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* крестик удаления коммента */
+.deleteCommentBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #eb5a46;
+  font-size: 12px;
+  display: none;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.commentItem:hover .deleteCommentBtn {
+  display: block;
+}
+
+.newCommentInput {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(9,30,66,.25);
+}
+
+.addCommentBtn {
+  background-color: #0079bf;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.addCommentBtn:hover {
+  background-color: #026aa7;
+}

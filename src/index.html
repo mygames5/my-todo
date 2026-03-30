@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trello clone</title>
+</head>
+<body>
+  <div class="board">
+    <div class="column" data_column="todo">
+      <div class="columnHeader">TODO</div>
+      <div class="cardsList"></div>
+      <div class="addCardWrapper">
+        <button class="addCardBtn">+ add another card</button>
+        <div class="addCardForm hidden">
+          <textarea placeholder="enter a title for this card..."></textarea>
+          <div class="addCardControls">
+            <button class="saveCardBtn">add card</button>
+            <button class="cancelCardBtn">✖</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column" data_column="inProgress">
+      <div class="columnHeader">IN PROGRESS</div>
+      <div class="cardsList"></div>
+      <div class="addCardWrapper">
+        <button class="addCardBtn">+ add another card</button>
+        <div class="addCardForm hidden">
+          <textarea placeholder="enter a title for this card..."></textarea>
+          <div class="addCardControls">
+            <button class="saveCardBtn">add card</button>
+            <button class="cancelCardBtn">✖</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column" data_column="done">
+      <div class="columnHeader">DONE</div>
+      <div class="cardsList"></div>
+      <div class="addCardWrapper">
+        <button class="addCardBtn">+ add another card</button>
+        <div class="addCardForm hidden">
+          <textarea placeholder="enter a title for this card..."></textarea>
+          <div class="addCardControls">
+            <button class="saveCardBtn">add card</button>
+            <button class="cancelCardBtn">✖</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="commentModal" class="modal hidden">
+    <div class="modalContent">
+      <div class="modalHeader">
+        <h3>Комментарии</h3>
+        <span class="closeModalBtn">✖</span>
+      </div>
+      <div class="commentsListContainer"></div>
+      <textarea class="newCommentInput" placeholder="Напишите комментарий или вставьте ссылку на картинку..."></textarea>
+      <button class="addCommentBtn">Добавить</button>
+    </div>
+  </div>
+</body>
+</html>
